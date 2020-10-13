@@ -12,7 +12,9 @@ Root URL is ```https://app.seo-for-jobs.com/api/public```
 API token must be present in ```x-api-token``` header.
 Body Request type is ```application/json```
 
-## ```GET /jobs```
+## API Calls
+
+### ```GET /jobs```
 
 Get a list of all job postings within your account.
 
@@ -40,7 +42,7 @@ none
 $curl -XGET -H 'x-api-key: cca265e6-5c40-4187-a0e9-713b4a9c453f' 'https://app.seo-for-jobs.com/api/public/jobs'
 ````
 
-## ```POST /job```
+### ```POST /job```
 
 Create a new job posting within your account.
 
@@ -77,7 +79,7 @@ Create a new job posting within your account.
 $curl -XPOST -H 'x-api-key: cca265e6-5c40-4187-a0e9-713b4a9c453f' -H "Content-type: application/json" -d '{status: "PUBLISHED",title: "SAP S/4HANA Senior Developer",description: "Lore Ipsum …",employmentType: ["FULLTIME", "PARTTIME"],streetAndNo:"Jungfernstieg 47",city: "Hamburg",postalCode: "20354",countryCode: "DE",companyName: "SFJ",redirectUrl: "https://www.seo-for-jobs.de/jobs/sap-hana-senior-developer"}' 'https://app.seo-for-jobs.com/api/public/job'
 ````
 
-## ```PUT /job/{id}```
+### ```PUT /job/{id}```
 
 Update an existing job posting with the corresponding {id}. Only submitted parameters will be updated. The update will be automatically pushed to Google in case the status is after the update process "PUBLISHED".
 
@@ -114,7 +116,7 @@ Update an existing job posting with the corresponding {id}. Only submitted param
 $curl -XPUT -H 'x-api-key: cca265e6-5c40-4187-a0e9-713b4a9c453f'  -H "Content-type: application/json" -d '{title: "SAP S/4HANA Junior Developer",employmentType: ["FULLTIME"]}' 'https://app.seo-for-jobs.com/api/public/job/2fd59d17-14ea-4b86-a3d8-c3126db5fbc6'
 ````
 
-## ```DELETE /job/{id}```
+### ```DELETE /job/{id}```
 
 Delete a job posting with the corresponding {id}.
 
