@@ -3,7 +3,9 @@
 SEO for Jobs APIs allow you to integrate Google for Jobs with ease and go beyond the basic job posting integration out of the box.
 
 This API requires a valid SEO for Jobs accout. You can create a free account here: https://www.seo-for-jobs.com
+
 Within your accout you can request an API token, which is also required for authentication.
+
 The standard request limit is 50 requests per hour and can be increased on request.
 
 ## Basics
